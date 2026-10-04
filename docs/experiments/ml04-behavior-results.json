@@ -1,0 +1,694 @@
+{
+  "experiment": "ml04-behavior-selection-v1",
+  "profiles": 300,
+  "candidates": 5006,
+  "test_scored": false,
+  "original_metrics_reproduced": true,
+  "old_artifacts_unchanged": true,
+  "training": {
+    "explicit_rows": 324955,
+    "fitting_people": 92830,
+    "rating_counts": {
+      "1": 3977,
+      "2": 4415,
+      "3": 10643,
+      "4": 43688,
+      "5": 262232
+    },
+    "positive_pairs": 305920,
+    "people_with_positive": 86845,
+    "people_with_one_positive": 61618,
+    "people_with_at_least_two": 25227,
+    "people_with_at_least_five": 10103,
+    "people_with_at_least_ten": 5285,
+    "positive_history_quantiles_0_50_90_99_100": [
+      1,
+      1,
+      5,
+      48,
+      1725
+    ],
+    "recipes_with_positive": 5006,
+    "co_like_recipe_components": 7,
+    "largest_recipe_component": 5000,
+    "validation_users_absent_from_fit": true
+  },
+  "fitting_receipt": {
+    "protocol_sha256": "68262b234c072c720eeee8e481479ad24e4998466dc351a0da92d155545a5a7b",
+    "models": {
+      "direct/raw": {
+        "artifact_sha256": {
+          "direct_raw.npz": "6e9684807a2f916705a51d41182dfa3e6e11119c1da65188adb8d6f31adec239"
+        },
+        "fitting_seconds": 7.600196099996538,
+        "nonzero_relationships": 10062536,
+        "mode": "raw",
+        "shrinkage": null
+      },
+      "direct/cosine_shrunk": {
+        "artifact_sha256": {
+          "direct_cosine_shrunk.npz": "9656c990dad76872cdaffc78ef2039e297c65a79b4858d5b6794b54e48acdc52"
+        },
+        "fitting_seconds": 10.07780659999844,
+        "nonzero_relationships": 10062536,
+        "mode": "cosine_shrunk",
+        "shrinkage": 10
+      },
+      "cf/a5_r1": {
+        "artifact_sha256": {
+          "cf_a5_r1_items.npy": "a091432f4b8d4183444d5f1d5e2dbb46bb32030424bfd4675bbdd979fa87156b",
+          "cf_a5_r1_users.npy": "18db60e740033a832b3066e355f56edb03d0332a4513c492b9a30c3567d96ba6"
+        },
+        "parameters": {
+          "alpha": 5,
+          "regularization": 1,
+          "dimensions": 32,
+          "iterations": 12,
+          "seed": 20260930
+        },
+        "objective_trace": [
+          1835536.0713908712,
+          1631376.7333127535,
+          1473631.2084952472,
+          1449067.9327922314,
+          1437414.9060894186,
+          1430914.591735663,
+          1426787.1130485313,
+          1423899.6692539128,
+          1421744.4616636964,
+          1420063.8308517342,
+          1418712.2500295246,
+          1417600.3204277277,
+          1416669.4003303132
+        ],
+        "fitting_seconds": 103.50578179999866,
+        "trained_by_tasteprint": true,
+        "blas_threads": 1
+      },
+      "cf/a20_r10": {
+        "artifact_sha256": {
+          "cf_a20_r10_items.npy": "6036e7a7b0a7b94f428ed0963e054bd7eaeb1f74305cf6b016465346c6924395",
+          "cf_a20_r10_users.npy": "4d0b191363d9cd12568ae6ab39a9f8f109e9555a2802f94a013eac1e57c5beef"
+        },
+        "parameters": {
+          "alpha": 20,
+          "regularization": 10,
+          "dimensions": 32,
+          "iterations": 12,
+          "seed": 20260930
+        },
+        "objective_trace": [
+          6424480.713908711,
+          4915741.194654084,
+          4158515.197535735,
+          4053486.427474417,
+          4000229.5985576557,
+          3970248.5566489226,
+          3951502.2245026934,
+          3938652.2381468904,
+          3929279.248890388,
+          3922150.8470642525,
+          3916561.396395887,
+          3912071.550834944,
+          3908392.1337981527
+        ],
+        "fitting_seconds": 107.49509670000043,
+        "trained_by_tasteprint": true,
+        "blas_threads": 1
+      },
+      "cf/a5_r10": {
+        "artifact_sha256": {
+          "cf_a5_r10_items.npy": "a1329b9ead761c357e3f5be87241db136d14d7f4043345d2f0440395a1ee7d19",
+          "cf_a5_r10_users.npy": "fe8051e6dd2ffef28ddc06e62b3a73cc8a95254162cbbba5461ca88310282647"
+        },
+        "parameters": {
+          "alpha": 5,
+          "regularization": 10,
+          "dimensions": 32,
+          "iterations": 12,
+          "seed": 20260930
+        },
+        "objective_trace": [
+          1835680.7139087112,
+          1702868.004005719,
+          1517108.7970546207,
+          1490052.143521213,
+          1477380.676394954,
+          1470510.611832205,
+          1466344.3100013344,
+          1463585.3963340195,
+          1461640.8142409679,
+          1460208.2189167624,
+          1459118.073105937,
+          1458267.7897894583,
+          1457591.4535980509
+        ],
+        "fitting_seconds": 109.0973339000011,
+        "trained_by_tasteprint": true,
+        "blas_threads": 1
+      }
+    },
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pyarrow": "25.0.1",
+      "threadpoolctl": "3.7.0"
+    },
+    "test_scored": false
+  },
+  "metrics_and_diagnostics": {
+    "popularity": {
+      "metrics": {
+        "precision@10": 0.05333333333333334,
+        "recall@10": 0.03204885731610839,
+        "ndcg@10": 0.06204756076141692,
+        "hit_rate@10": 0.3233333333333333,
+        "catalog_coverage@10": 0.0023971234518577705,
+        "people_with_hit": 97
+      },
+      "top10_rating_status": {
+        "known_high": 160,
+        "known_lower": 9,
+        "unknown": 2831
+      },
+      "unique_recommended_recipes": 12,
+      "largest_single_recipe_recommendation_share": 0.09933333333333333,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.47692111192192166
+      }
+    },
+    "full/centroid": {
+      "metrics": {
+        "precision@10": 0.005,
+        "recall@10": 0.007242441302873231,
+        "ndcg@10": 0.005696052554723167,
+        "hit_rate@10": 0.05,
+        "catalog_coverage@10": 0.18997203355972833,
+        "people_with_hit": 15
+      },
+      "top10_rating_status": {
+        "known_high": 15,
+        "known_lower": 0,
+        "unknown": 2985
+      },
+      "unique_recommended_recipes": 951,
+      "largest_single_recipe_recommendation_share": 0.025,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.515813390574898
+      }
+    },
+    "cf/a20_r1": {
+      "metrics": {
+        "precision@10": 0.030666666666666665,
+        "recall@10": 0.028368906524335078,
+        "ndcg@10": 0.04167924918127145,
+        "hit_rate@10": 0.22666666666666666,
+        "catalog_coverage@10": 0.07371154614462645,
+        "people_with_hit": 68
+      },
+      "top10_rating_status": {
+        "known_high": 92,
+        "known_lower": 3,
+        "unknown": 2905
+      },
+      "unique_recommended_recipes": 369,
+      "largest_single_recipe_recommendation_share": 0.021333333333333333,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5069348055404873
+      }
+    },
+    "direct/raw": {
+      "metrics": {
+        "precision@10": 0.05533333333333334,
+        "recall@10": 0.03843344035617665,
+        "ndcg@10": 0.06969395547082574,
+        "hit_rate@10": 0.33,
+        "catalog_coverage@10": 0.010187774670395526,
+        "people_with_hit": 99
+      },
+      "top10_rating_status": {
+        "known_high": 166,
+        "known_lower": 8,
+        "unknown": 2826
+      },
+      "unique_recommended_recipes": 51,
+      "largest_single_recipe_recommendation_share": 0.093,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5217983035637467
+      }
+    },
+    "direct/cosine_shrunk": {
+      "metrics": {
+        "precision@10": 0.048,
+        "recall@10": 0.032382877306338695,
+        "ndcg@10": 0.0644644121848565,
+        "hit_rate@10": 0.31333333333333335,
+        "catalog_coverage@10": 0.05813024370755094,
+        "people_with_hit": 94
+      },
+      "top10_rating_status": {
+        "known_high": 144,
+        "known_lower": 5,
+        "unknown": 2851
+      },
+      "unique_recommended_recipes": 291,
+      "largest_single_recipe_recommendation_share": 0.08933333333333333,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.522266366002746
+      }
+    },
+    "cf/a5_r1": {
+      "metrics": {
+        "precision@10": 0.030333333333333334,
+        "recall@10": 0.028309622317691973,
+        "ndcg@10": 0.041315332138735034,
+        "hit_rate@10": 0.21333333333333335,
+        "catalog_coverage@10": 0.04714342788653616,
+        "people_with_hit": 64
+      },
+      "top10_rating_status": {
+        "known_high": 91,
+        "known_lower": 5,
+        "unknown": 2904
+      },
+      "unique_recommended_recipes": 236,
+      "largest_single_recipe_recommendation_share": 0.021666666666666667,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.48720881198312604
+      }
+    },
+    "cf/a20_r10": {
+      "metrics": {
+        "precision@10": 0.03166666666666667,
+        "recall@10": 0.0330824009413541,
+        "ndcg@10": 0.04349320346610373,
+        "hit_rate@10": 0.23,
+        "catalog_coverage@10": 0.07251298441869757,
+        "people_with_hit": 69
+      },
+      "top10_rating_status": {
+        "known_high": 95,
+        "known_lower": 3,
+        "unknown": 2902
+      },
+      "unique_recommended_recipes": 363,
+      "largest_single_recipe_recommendation_share": 0.022333333333333334,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5127225545643502
+      }
+    },
+    "cf/a5_r10": {
+      "metrics": {
+        "precision@10": 0.033,
+        "recall@10": 0.026814955817290372,
+        "ndcg@10": 0.042357447007141634,
+        "hit_rate@10": 0.22333333333333333,
+        "catalog_coverage@10": 0.04614462644826209,
+        "people_with_hit": 67
+      },
+      "top10_rating_status": {
+        "known_high": 99,
+        "known_lower": 4,
+        "unknown": 2897
+      },
+      "unique_recommended_recipes": 231,
+      "largest_single_recipe_recommendation_share": 0.022,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.48934702926732415
+      }
+    }
+  },
+  "shuffled_controls": {
+    "cf/a20_r1": {
+      "metrics": {
+        "precision@10": 0.02766666666666667,
+        "recall@10": 0.013362786981963219,
+        "ndcg@10": 0.02953372046671736,
+        "hit_rate@10": 0.19666666666666666,
+        "catalog_coverage@10": 0.0813024370755094,
+        "people_with_hit": 59
+      },
+      "top10_rating_status": {
+        "known_high": 83,
+        "known_lower": 4,
+        "unknown": 2913
+      },
+      "unique_recommended_recipes": 407,
+      "largest_single_recipe_recommendation_share": 0.025666666666666667,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5203534417892809
+      }
+    },
+    "direct/raw": {
+      "metrics": {
+        "precision@10": 0.04733333333333333,
+        "recall@10": 0.019379414958910265,
+        "ndcg@10": 0.05594535122070437,
+        "hit_rate@10": 0.29,
+        "catalog_coverage@10": 0.010787055533359968,
+        "people_with_hit": 87
+      },
+      "top10_rating_status": {
+        "known_high": 142,
+        "known_lower": 10,
+        "unknown": 2848
+      },
+      "unique_recommended_recipes": 54,
+      "largest_single_recipe_recommendation_share": 0.089,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5196986309047894
+      }
+    },
+    "direct/cosine_shrunk": {
+      "metrics": {
+        "precision@10": 0.036333333333333336,
+        "recall@10": 0.016439345209915354,
+        "ndcg@10": 0.04154107137177034,
+        "hit_rate@10": 0.24,
+        "catalog_coverage@10": 0.05912904514582501,
+        "people_with_hit": 72
+      },
+      "top10_rating_status": {
+        "known_high": 109,
+        "known_lower": 8,
+        "unknown": 2883
+      },
+      "unique_recommended_recipes": 296,
+      "largest_single_recipe_recommendation_share": 0.08366666666666667,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5204060867183582
+      }
+    },
+    "cf/a5_r1": {
+      "metrics": {
+        "precision@10": 0.030666666666666665,
+        "recall@10": 0.020927816370322806,
+        "ndcg@10": 0.03445864367104091,
+        "hit_rate@10": 0.23333333333333334,
+        "catalog_coverage@10": 0.05313623651618058,
+        "people_with_hit": 70
+      },
+      "top10_rating_status": {
+        "known_high": 92,
+        "known_lower": 5,
+        "unknown": 2903
+      },
+      "unique_recommended_recipes": 266,
+      "largest_single_recipe_recommendation_share": 0.027,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5479316096136521
+      }
+    },
+    "cf/a20_r10": {
+      "metrics": {
+        "precision@10": 0.028333333333333332,
+        "recall@10": 0.013910332485510886,
+        "ndcg@10": 0.031202567101849467,
+        "hit_rate@10": 0.20333333333333334,
+        "catalog_coverage@10": 0.07950459448661606,
+        "people_with_hit": 61
+      },
+      "top10_rating_status": {
+        "known_high": 85,
+        "known_lower": 5,
+        "unknown": 2910
+      },
+      "unique_recommended_recipes": 398,
+      "largest_single_recipe_recommendation_share": 0.026,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5105532130459476
+      }
+    },
+    "cf/a5_r10": {
+      "metrics": {
+        "precision@10": 0.03133333333333333,
+        "recall@10": 0.019974176848274527,
+        "ndcg@10": 0.034848277398881876,
+        "hit_rate@10": 0.23,
+        "catalog_coverage@10": 0.05133839392728726,
+        "people_with_hit": 69
+      },
+      "top10_rating_status": {
+        "known_high": 94,
+        "known_lower": 5,
+        "unknown": 2901
+      },
+      "unique_recommended_recipes": 257,
+      "largest_single_recipe_recommendation_share": 0.02666666666666667,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5447105851647075
+      }
+    }
+  },
+  "correct_minus_shuffled_ndcg": {
+    "cf/a20_r1": {
+      "mean_ndcg_difference": 0.012145528714554092,
+      "paired_bootstrap_95_percent_interval": [
+        -0.00045965924054902304,
+        0.025223847499123892
+      ],
+      "better_people": 55,
+      "worse_people": 42,
+      "tied_people": 203
+    },
+    "direct/raw": {
+      "mean_ndcg_difference": 0.013748604250121371,
+      "paired_bootstrap_95_percent_interval": [
+        0.005755116263508462,
+        0.022324290103775953
+      ],
+      "better_people": 60,
+      "worse_people": 37,
+      "tied_people": 203
+    },
+    "direct/cosine_shrunk": {
+      "mean_ndcg_difference": 0.02292334081308617,
+      "paired_bootstrap_95_percent_interval": [
+        0.010340895129196007,
+        0.036721180811437874
+      ],
+      "better_people": 70,
+      "worse_people": 39,
+      "tied_people": 191
+    },
+    "cf/a5_r1": {
+      "mean_ndcg_difference": 0.00685668846769413,
+      "paired_bootstrap_95_percent_interval": [
+        -0.007121011846962941,
+        0.021014200518921493
+      ],
+      "better_people": 48,
+      "worse_people": 52,
+      "tied_people": 200
+    },
+    "cf/a20_r10": {
+      "mean_ndcg_difference": 0.012290636364254263,
+      "paired_bootstrap_95_percent_interval": [
+        -0.001102142003491627,
+        0.026480437794502015
+      ],
+      "better_people": 55,
+      "worse_people": 44,
+      "tied_people": 201
+    },
+    "cf/a5_r10": {
+      "mean_ndcg_difference": 0.007509169608259749,
+      "paired_bootstrap_95_percent_interval": [
+        -0.006794072899170435,
+        0.02220512486090755
+      ],
+      "better_people": 52,
+      "worse_people": 50,
+      "tied_people": 198
+    }
+  },
+  "paired_ndcg_comparisons": {
+    "popularity": {
+      "full/centroid": {
+        "mean_ndcg_difference": -0.05635150820669376,
+        "paired_bootstrap_95_percent_interval": [
+          -0.07000698901710067,
+          -0.04365500075182578
+        ],
+        "better_people": 7,
+        "worse_people": 97,
+        "tied_people": 196
+      },
+      "cf/a20_r1": {
+        "mean_ndcg_difference": -0.020368311580145466,
+        "paired_bootstrap_95_percent_interval": [
+          -0.0329317138405586,
+          -0.008336306604223336
+        ],
+        "better_people": 38,
+        "worse_people": 77,
+        "tied_people": 185
+      },
+      "direct/raw": {
+        "mean_ndcg_difference": 0.007646394709408824,
+        "paired_bootstrap_95_percent_interval": [
+          0.001936941396156219,
+          0.013276623395560287
+        ],
+        "better_people": 63,
+        "worse_people": 34,
+        "tied_people": 203
+      },
+      "direct/cosine_shrunk": {
+        "mean_ndcg_difference": 0.002416851423439588,
+        "paired_bootstrap_95_percent_interval": [
+          -0.008266001569916503,
+          0.013769489919595423
+        ],
+        "better_people": 57,
+        "worse_people": 61,
+        "tied_people": 182
+      },
+      "cf/a5_r1": {
+        "mean_ndcg_difference": -0.020732228622681887,
+        "paired_bootstrap_95_percent_interval": [
+          -0.03383856117026147,
+          -0.00795401706124151
+        ],
+        "better_people": 35,
+        "worse_people": 73,
+        "tied_people": 192
+      },
+      "cf/a20_r10": {
+        "mean_ndcg_difference": -0.018554357295313184,
+        "paired_bootstrap_95_percent_interval": [
+          -0.03041356896209189,
+          -0.006921737202976387
+        ],
+        "better_people": 38,
+        "worse_people": 77,
+        "tied_people": 185
+      },
+      "cf/a5_r10": {
+        "mean_ndcg_difference": -0.019690113754275287,
+        "paired_bootstrap_95_percent_interval": [
+          -0.032694133769648026,
+          -0.006643614464949613
+        ],
+        "better_people": 37,
+        "worse_people": 71,
+        "tied_people": 192
+      }
+    },
+    "cf/a20_r1": {
+      "popularity": {
+        "mean_ndcg_difference": 0.020368311580145466,
+        "paired_bootstrap_95_percent_interval": [
+          0.008336306604223334,
+          0.032931713840558596
+        ],
+        "better_people": 77,
+        "worse_people": 38,
+        "tied_people": 185
+      },
+      "full/centroid": {
+        "mean_ndcg_difference": -0.03598319662654828,
+        "paired_bootstrap_95_percent_interval": [
+          -0.04860780517250324,
+          -0.023963429846872976
+        ],
+        "better_people": 10,
+        "worse_people": 65,
+        "tied_people": 225
+      },
+      "direct/raw": {
+        "mean_ndcg_difference": 0.028014706289554294,
+        "paired_bootstrap_95_percent_interval": [
+          0.016115708802736536,
+          0.03985163743702551
+        ],
+        "better_people": 76,
+        "worse_people": 38,
+        "tied_people": 186
+      },
+      "direct/cosine_shrunk": {
+        "mean_ndcg_difference": 0.022785163003585053,
+        "paired_bootstrap_95_percent_interval": [
+          0.012186823788436866,
+          0.03361937390499399
+        ],
+        "better_people": 78,
+        "worse_people": 32,
+        "tied_people": 190
+      },
+      "cf/a5_r1": {
+        "mean_ndcg_difference": -0.00036391704253641965,
+        "paired_bootstrap_95_percent_interval": [
+          -0.006976398858396294,
+          0.006616496508751528
+        ],
+        "better_people": 37,
+        "worse_people": 43,
+        "tied_people": 220
+      },
+      "cf/a20_r10": {
+        "mean_ndcg_difference": 0.0018139542848322806,
+        "paired_bootstrap_95_percent_interval": [
+          -0.0007416939182807517,
+          0.004876819284824364
+        ],
+        "better_people": 26,
+        "worse_people": 23,
+        "tied_people": 251
+      },
+      "cf/a5_r10": {
+        "mean_ndcg_difference": 0.0006781978258701785,
+        "paired_bootstrap_95_percent_interval": [
+          -0.006567696297454612,
+          0.007995384536018
+        ],
+        "better_people": 42,
+        "worse_people": 41,
+        "tied_people": 217
+      }
+    }
+  },
+  "fitting_top100_recommendation_share": {
+    "popularity": 1,
+    "full/centroid": 0.029666666666666668,
+    "cf/a20_r1": 0.7106666666666667,
+    "direct/raw": 0.9993333333333333,
+    "direct/cosine_shrunk": 0.776,
+    "cf/a5_r1": 0.84,
+    "cf/a20_r10": 0.7223333333333334,
+    "cf/a5_r10": 0.8566666666666667
+  },
+  "provisional_behavioral_nominee": "direct/raw",
+  "protocol_sha256": "68262b234c072c720eeee8e481479ad24e4998466dc351a0da92d155545a5a7b",
+  "implementation_sha256": {
+    "co_like.py": "0cbe43443b5b8d6c535e6c58e4241bd4422eff522176095800fb38002fb12908",
+    "run_behavior_comparison.py": "ceb28982eba0ef4bbfcbdd87e6f4d9d9f75ae1ac9ec9d697d3f0c7b01f1aebed",
+    "collaborative.py": "432dbe6c4a3f3ac5f0ae8d818d8be681778ec5a3a1d916e687d2511373617775",
+    "run_collaborative_experiment.py": "88e5b2658fe09afae6860d0fb51126ea89d99d78df8f7e87b9e5c6b1356ff986",
+    "run_content_ablation.py": "951241979d300431486b272e78492d793dcc0a39cf8ae3a8ed485942f2cdbd2b",
+    "content_ablation.py": "d78c7c98a5f82d73281defc33fa7855ca5f3624c9e65e0bc7ff2e0157da37bf1",
+    "recommendation.py": "b8e4d3712af23604ac234b0d33e72cb13da7ac1609d371475ea215378106183f"
+  },
+  "cases_sha256": "3c43a0bd3408f0be4aa5ba5977230a8f6dc21921784207dbc563bc361e63d6f5",
+  "rankings_sha256": "f20b7dbe4ab899fc790efd1170a79bb1adf202174a60a50c528e9541703a88ec",
+  "limitations": [
+    "Repeated validation use and selection among methods; no independent final-test claim.",
+    "Bootstrap intervals do not correct multiple comparisons or training-seed variation.",
+    "Unrated suggestions are unknown; co-like normalization is not causal removal of exposure/popularity.",
+    "The 30-dish frontend and six-choice onboarding distribution are not validated by this experiment."
+  ]
+}

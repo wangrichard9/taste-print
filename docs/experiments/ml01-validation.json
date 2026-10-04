@@ -1,0 +1,56 @@
+{
+  "protocol": "ml01-user-disjoint-six-likes-v1",
+  "split": "validation",
+  "test_scored": false,
+  "profiles": 300,
+  "candidate_recipes": 5006,
+  "mean_heldout_likes": 22.166666666666668,
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "metrics": {
+    "popularity": {
+      "precision@10": 0.05333333333333334,
+      "recall@10": 0.03204885731610839,
+      "ndcg@10": 0.06204756076141692,
+      "hit_rate@10": 0.3233333333333333,
+      "catalog_coverage@10": 0.0023971234518577705
+    },
+    "semantic": {
+      "precision@10": 0.005,
+      "recall@10": 0.007242441302873231,
+      "ndcg@10": 0.005696052554723167,
+      "hit_rate@10": 0.05,
+      "catalog_coverage@10": 0.18997203355972833
+    }
+  },
+  "semantic_minus_popularity_ndcg@10": -0.05635150820669376,
+  "paired_bootstrap_95_percent_interval": [
+    -0.07000698901710067,
+    -0.04365500075182578
+  ],
+  "validation_users_semantic_better_ndcg": 7,
+  "validation_users_popularity_better_ndcg": 97,
+  "validation_users_tied_ndcg": 196,
+  "ranking_loop_seconds": 0.4312431000016659,
+  "artifacts": {
+    "catalog.json": "723f7db2cc8dfe33aa9b059b81379e72180d7085c1bc3e7ea1ad0569dc37225e",
+    "validation.json": "92a4851cd3407cc960065fbf535996db72744667fc4f50a447f10b65a1f3dc55",
+    "test.json": "e0b5fd047dafe0cc2d0a6d6b60873d757d892dc724b5659aa89477b927f47770",
+    "train.parquet": "3ec6e799f22903438fdfc0600cc9821698d4b501b9a1616d31523d76d59b1114",
+    "demo-id-map.json": "976dfea08516cc9abf9cd75ee86d7171bea0319092c6162c865ac1ce48ae2727"
+  },
+  "embedding_sha256": "de81c908a77d62f4dfae08e5d48a9c07913e3e297abc3d4549a7234c3bc48853",
+  "implementation_sha256": {
+    "recommendation.py": "b8e4d3712af23604ac234b0d33e72cb13da7ac1609d371475ea215378106183f",
+    "prepare_recommendation_data.py": "dc2ecc7f2fb75d8ad6664bbc480b388ba622edf6f5a65951e211f2ad6f762fbb",
+    "run_recommendation_experiment.py": "7c8d13d1d8990125ff3ad05a5fe14cc03d826a7394096ceae782e42a6251e7c7"
+  },
+  "limitations": [
+    "Catalog-conditioned, active-reviewer sample; not the full catalog or representative of Expo visitors.",
+    "User-disjoint, not global chronological: fitting-user ratings can be later than evaluation seeds.",
+    "Exact title/ingredient identities collapsed; near-duplicate variants may remain.",
+    "Unobserved items are not established dislikes; incomplete positives and positive-heavy ratings limit interpretation.",
+    "Reused generic text model is not food-specific or fine-tuned; no allergy guarantees."
+  ]
+}
+

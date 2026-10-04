@@ -1,0 +1,52 @@
+/* UI 05: destination feedback and concise arrivals; no route or data policy changes. */
+.animated-app-header { border-bottom:0; padding:18px 28px 0; position:relative; z-index:10; }
+.animated-app-header .nav-capsule { position:relative; max-width:1120px; padding:8px 17px 8px 23px; height:70px; gap:24px; background:white; border:1px solid var(--line); border-radius:17px; box-shadow:0 4px 20px #17244508; }
+.animated-app-header .wordmark { font-size:25px; letter-spacing:-1.4px; }
+.animated-app-header nav { height:auto; gap:3px; }
+.animated-app-header nav a { height:44px; padding:0 15px; border-radius:9px; font-size:12px; color:var(--muted); }
+.animated-app-header nav a[aria-current]::after { display:none; }
+.animated-app-header nav a:hover,.animated-app-header nav a:focus-visible { color:var(--cobalt); }
+.nav-travelling-highlight { position:absolute; inset:0; border-radius:9px; background:var(--selected); pointer-events:none; }
+.nav-destination-label { position:relative; z-index:1; }
+.animated-app-header .avatar { background:white; transition:background 180ms ease,transform 180ms ease; flex-shrink:0; }
+.animated-app-header .avatar:hover,.animated-app-header .avatar:focus-visible { background:var(--selected); transform:translateY(-2px); color:var(--cobalt); }
+.nav-destination-preview { position:absolute; width:560px; left:calc(50% - 280px); top:calc(100% + 10px); display:grid; grid-template-columns:220px 1fr; align-items:center; gap:10px; border:1px solid var(--line); background:white; box-shadow:0 14px 36px #14234414; border-radius:12px; padding:18px; }
+.nav-preview-art { height:150px; overflow:hidden; border-radius:7px; background:#fafbff; }
+.nav-destination-graphic { width:100%; height:150px; display:block; }
+.nav-destination-graphic path { stroke-linecap:round; stroke-linejoin:round; }
+.nav-art-faint { fill:none; stroke:#e8edf8; stroke-width:1; }
+.nav-art-line { fill:none; stroke:#b5bfd6; stroke-width:1.2; }
+.nav-art-accent { fill:none; stroke:var(--cobalt); stroke-width:1.5; }
+.nav-art-disc { fill:white; stroke:#cbd3e7; stroke-width:1; }
+.nav-art-center { fill:var(--selected); stroke:none; }
+.nav-art-dot { fill:var(--cobalt); stroke:none; }
+.nav-preview-copy { padding:4px 10px; }
+.nav-preview-copy .eyebrow { display:flex; gap:7px; align-items:center; color:var(--cobalt); font-size:10px; margin-bottom:10px; }
+.nav-preview-copy h2 { font-size:22px; font-weight:500; line-height:1.2; letter-spacing:-.7px; }
+.nav-preview-copy p { font-size:11px; line-height:1.8; color:var(--muted); margin:9px 0 14px; }
+.nav-preview-hint { display:inline-flex; align-items:center; gap:6px; font-size:11px; color:var(--cobalt); min-height:28px; }
+.page-arrival > .intro,.page-arrival > .feature-page > .intro { animation:app-arrive 380ms cubic-bezier(.22,1,.36,1) both; }
+.page-arrival > .toolbar,.page-arrival > .recommendation-status,.page-arrival .fp-profile-mode,.page-arrival .taste-portrait-heading,.page-arrival .fp-group-intro { animation:app-arrive 380ms 65ms cubic-bezier(.22,1,.36,1) both; }
+.page-arrival > .discovery-layout,.page-arrival .fp-view-switch,.page-arrival .fp-kitchen-layout,.page-arrival .fp-people-grid { animation:app-arrive 420ms 120ms cubic-bezier(.22,1,.36,1) both; }
+@keyframes app-arrive { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.fp-view-switch.gliding-view-switch > button { position:relative; border-bottom-color:transparent; }
+.gliding-view-switch .taste-view-indicator { position:absolute; bottom:-1px; left:0; right:0; height:2px; background:var(--cobalt); }
+.gliding-view-switch > button:hover { color:var(--cobalt); }
+.view-content-arrival { animation:view-arrive 240ms cubic-bezier(.22,1,.36,1) both; }
+@keyframes view-arrive { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:translateY(0); } }
+.merge-card { position:relative; overflow:hidden; transition:transform 220ms ease,box-shadow 220ms ease; }
+.merge-card::before { content:''; position:absolute; inset:0; background:#ffffff09; transform:translateX(-100%); transition:transform 320ms cubic-bezier(.22,1,.36,1); pointer-events:none; }
+.merge-card:hover,.merge-card:focus-visible { transform:translateY(-4px); box-shadow:0 8px 18px #2439a51a; }
+.merge-card:hover::before,.merge-card:focus-visible::before { transform:translateX(0); }
+.merge-card .merge-link > svg,.taste-profile-next a > svg,.side-note .text-link > svg,.fp-kitchen-taste .text-link > svg { transition:transform 220ms ease; }
+.merge-card:hover .merge-link > svg,.merge-card:focus-visible .merge-link > svg { transform:translate(3px,-3px); }
+.taste-profile-next a { position:relative; padding:12px 0; transition:color 180ms ease,transform 220ms ease; }
+.taste-profile-next a::after { content:''; position:absolute; left:0; right:0; bottom:4px; height:1px; background:var(--cobalt); transform:scaleX(0); transform-origin:left; transition:transform 250ms ease; }
+.taste-profile-next a:hover,.taste-profile-next a:focus-visible { color:var(--cobalt); transform:translateY(-2px); }
+.taste-profile-next a:hover::after,.taste-profile-next a:focus-visible::after { transform:scaleX(1); }
+.taste-profile-next a:hover > svg,.taste-profile-next a:focus-visible > svg { transform:translate(3px,-3px); }
+.side-note .text-link:hover > svg,.side-note .text-link:focus-visible > svg,.fp-kitchen-taste .text-link:hover > svg,.fp-kitchen-taste .text-link:focus-visible > svg { transform:translateX(4px); }
+@media(max-width:900px) { .animated-app-header { padding:14px 20px 0; } .animated-app-header .nav-capsule { gap:12px; padding:8px 13px; } .animated-app-header nav a { padding:0 10px; font-size:11px; } .animated-app-header .wordmark { font-size:23px; } }
+@media(max-width:680px) { .animated-app-header { padding:12px 16px 0; } .animated-app-header .nav-capsule { height:auto; flex-wrap:wrap; border-radius:13px; padding:12px; gap:10px; } .animated-app-header .avatar { margin-left:auto; } .animated-app-header nav { order:3; width:100%; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin:0; justify-content:stretch; } .animated-app-header nav a { padding:0 4px; justify-content:center; font-size:11px; white-space:nowrap; } .nav-destination-preview { display:none; } }
+@media(max-width:420px) { .animated-app-header nav { grid-template-columns:1fr 1fr; } }
+@media(hover:none) { .nav-destination-preview { display:none; } }

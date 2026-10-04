@@ -1,0 +1,352 @@
+{
+  "experiment": "ml02-content-grid-v1",
+  "profiles": 300,
+  "candidates": 5006,
+  "test_scored": false,
+  "original_metrics_reproduced": true,
+  "baseline_hashes_unchanged": true,
+  "metrics_and_diagnostics": {
+    "popularity": {
+      "metrics": {
+        "precision@10": 0.05333333333333334,
+        "recall@10": 0.03204885731610839,
+        "ndcg@10": 0.06204756076141692,
+        "hit_rate@10": 0.3233333333333333,
+        "catalog_coverage@10": 0.0023971234518577705,
+        "people_with_hit": 97
+      },
+      "top10_rating_status": {
+        "known_high": 160,
+        "known_lower": 9,
+        "unknown": 2831
+      },
+      "unique_recommended_recipes": 12,
+      "largest_single_recipe_recommendation_share": 0.09933333333333333,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.47692111192192166
+      }
+    },
+    "full/centroid": {
+      "metrics": {
+        "precision@10": 0.005,
+        "recall@10": 0.007242441302873231,
+        "ndcg@10": 0.005696052554723167,
+        "hit_rate@10": 0.05,
+        "catalog_coverage@10": 0.18997203355972833,
+        "people_with_hit": 15
+      },
+      "top10_rating_status": {
+        "known_high": 15,
+        "known_lower": 0,
+        "unknown": 2985
+      },
+      "unique_recommended_recipes": 951,
+      "largest_single_recipe_recommendation_share": 0.025,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.515813390574898
+      }
+    },
+    "full/closest": {
+      "metrics": {
+        "precision@10": 0.006,
+        "recall@10": 0.004751304122086086,
+        "ndcg@10": 0.0065234569448627015,
+        "hit_rate@10": 0.06,
+        "catalog_coverage@10": 0.27766679984019177,
+        "people_with_hit": 18
+      },
+      "top10_rating_status": {
+        "known_high": 18,
+        "known_lower": 0,
+        "unknown": 2982
+      },
+      "unique_recommended_recipes": 1390,
+      "largest_single_recipe_recommendation_share": 0.007333333333333333,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5189524630871751
+      }
+    },
+    "full/top_two": {
+      "metrics": {
+        "precision@10": 0.007,
+        "recall@10": 0.005836962497532677,
+        "ndcg@10": 0.006727477206168961,
+        "hit_rate@10": 0.06333333333333334,
+        "catalog_coverage@10": 0.2780663204155014,
+        "people_with_hit": 19
+      },
+      "top10_rating_status": {
+        "known_high": 21,
+        "known_lower": 1,
+        "unknown": 2978
+      },
+      "unique_recommended_recipes": 1392,
+      "largest_single_recipe_recommendation_share": 0.014666666666666666,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5355260458207205
+      }
+    },
+    "ingredients/centroid": {
+      "metrics": {
+        "precision@10": 0.008000000000000002,
+        "recall@10": 0.006372786286032945,
+        "ndcg@10": 0.009474919890584093,
+        "hit_rate@10": 0.07333333333333333,
+        "catalog_coverage@10": 0.1350379544546544,
+        "people_with_hit": 22
+      },
+      "top10_rating_status": {
+        "known_high": 24,
+        "known_lower": 1,
+        "unknown": 2975
+      },
+      "unique_recommended_recipes": 676,
+      "largest_single_recipe_recommendation_share": 0.028,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.4697949623196941
+      }
+    },
+    "ingredients/closest": {
+      "metrics": {
+        "precision@10": 0.008000000000000002,
+        "recall@10": 0.003324075929270212,
+        "ndcg@10": 0.008285006088164178,
+        "hit_rate@10": 0.07333333333333333,
+        "catalog_coverage@10": 0.25769077107471033,
+        "people_with_hit": 22
+      },
+      "top10_rating_status": {
+        "known_high": 24,
+        "known_lower": 2,
+        "unknown": 2974
+      },
+      "unique_recommended_recipes": 1290,
+      "largest_single_recipe_recommendation_share": 0.005,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.4417030581629237
+      }
+    },
+    "ingredients/top_two": {
+      "metrics": {
+        "precision@10": 0.008666666666666666,
+        "recall@10": 0.004642778331505257,
+        "ndcg@10": 0.009614653889718135,
+        "hit_rate@10": 0.07,
+        "catalog_coverage@10": 0.25389532560926886,
+        "people_with_hit": 21
+      },
+      "top10_rating_status": {
+        "known_high": 26,
+        "known_lower": 0,
+        "unknown": 2974
+      },
+      "unique_recommended_recipes": 1271,
+      "largest_single_recipe_recommendation_share": 0.007,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.44743034900264594
+      }
+    },
+    "shuffled_full/centroid": {
+      "metrics": {
+        "precision@10": 0.005,
+        "recall@10": 0.0007196157138023572,
+        "ndcg@10": 0.004630233452677649,
+        "hit_rate@10": 0.043333333333333335,
+        "catalog_coverage@10": 0.21793847383140233,
+        "people_with_hit": 13
+      },
+      "top10_rating_status": {
+        "known_high": 15,
+        "known_lower": 1,
+        "unknown": 2984
+      },
+      "unique_recommended_recipes": 1091,
+      "largest_single_recipe_recommendation_share": 0.024,
+      "observed_rating_auc": {
+        "people_with_high_and_lower": 92,
+        "macro_auc": 0.5121559177559779
+      }
+    }
+  },
+  "paired_changes_from_original_centroid": {
+    "popularity": {
+      "mean_ndcg_difference": 0.05635150820669376,
+      "paired_bootstrap_95_percent_interval": [
+        0.04365500075182577,
+        0.07000698901710067
+      ],
+      "better_people": 97,
+      "worse_people": 7,
+      "tied_people": 196
+    },
+    "full/closest": {
+      "mean_ndcg_difference": 0.000827404390139534,
+      "paired_bootstrap_95_percent_interval": [
+        -0.0035572267864546077,
+        0.0049733284089583584
+      ],
+      "better_people": 15,
+      "worse_people": 11,
+      "tied_people": 274
+    },
+    "full/top_two": {
+      "mean_ndcg_difference": 0.0010314246514457948,
+      "paired_bootstrap_95_percent_interval": [
+        -0.001957742941323425,
+        0.0040592890943851314
+      ],
+      "better_people": 15,
+      "worse_people": 11,
+      "tied_people": 274
+    },
+    "ingredients/centroid": {
+      "mean_ndcg_difference": 0.003778867335860925,
+      "paired_bootstrap_95_percent_interval": [
+        -0.002227315568992474,
+        0.009546758112343068
+      ],
+      "better_people": 21,
+      "worse_people": 12,
+      "tied_people": 267
+    },
+    "ingredients/closest": {
+      "mean_ndcg_difference": 0.002588953533441012,
+      "paired_bootstrap_95_percent_interval": [
+        -0.002206805901189877,
+        0.007385456673504155
+      ],
+      "better_people": 22,
+      "worse_people": 12,
+      "tied_people": 266
+    },
+    "ingredients/top_two": {
+      "mean_ndcg_difference": 0.003918601334994969,
+      "paired_bootstrap_95_percent_interval": [
+        -0.0013646234559056298,
+        0.00949466465206836
+      ],
+      "better_people": 20,
+      "worse_people": 14,
+      "tied_people": 266
+    },
+    "shuffled_full/centroid": {
+      "mean_ndcg_difference": -0.0010658191020455187,
+      "paired_bootstrap_95_percent_interval": [
+        -0.005275122403247195,
+        0.0030990099764135934
+      ],
+      "better_people": 13,
+      "worse_people": 15,
+      "tied_people": 272
+    }
+  },
+  "ingredient_text_effect_at_fixed_profile": {
+    "ingredients_minus_full/centroid": {
+      "mean_ndcg_difference": 0.003778867335860925,
+      "paired_bootstrap_95_percent_interval": [
+        -0.002227315568992474,
+        0.009546758112343068
+      ],
+      "better_people": 21,
+      "worse_people": 12,
+      "tied_people": 267
+    },
+    "ingredients_minus_full/closest": {
+      "mean_ndcg_difference": 0.0017615491433014773,
+      "paired_bootstrap_95_percent_interval": [
+        -0.0028206868168980056,
+        0.006719160694434319
+      ],
+      "better_people": 20,
+      "worse_people": 16,
+      "tied_people": 264
+    },
+    "ingredients_minus_full/top_two": {
+      "mean_ndcg_difference": 0.002887176683549174,
+      "paired_bootstrap_95_percent_interval": [
+        -0.002436612082576031,
+        0.008424954903098065
+      ],
+      "better_people": 19,
+      "worse_people": 18,
+      "tied_people": 263
+    }
+  },
+  "source_history_check": {
+    "all_300_profiles_reconstructed": true,
+    "future_high_records_all_content": 32288,
+    "future_high_records_in_catalog": 6650,
+    "pooled_positive_candidate_coverage": 0.20595887016848366,
+    "mean_person_positive_candidate_coverage": 0.49996860780776275,
+    "withheld_high_records_in_training_top100": 763,
+    "withheld_high_records_total": 6650,
+    "withheld_high_top100_fraction": 0.11473684210526315
+  },
+  "encoder_alignment": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "text_sha256": "c8df43aa79b41b90598af56a43d8031725936f57d1794e05baab98f0604f21b2",
+    "catalog_sha256": "723f7db2cc8dfe33aa9b059b81379e72180d7085c1bc3e7ea1ad0569dc37225e",
+    "vectors_sha256": "68d3ae7663bab1a8ca12470159cbfeef133fea5372ce767cda1df432f1f91edc",
+    "max_sequence_length": 256,
+    "maximum_input_tokens": 120,
+    "truncated_recipes": 0,
+    "reencoded_full_recipe_ids": [
+      34398,
+      38564,
+      43819,
+      51537,
+      58428,
+      81116,
+      119562,
+      135215
+    ],
+    "reencoded_max_absolute_differences": [
+      7.310882210731506e-8,
+      6.332993507385254e-8,
+      0,
+      6.705522537231445e-8,
+      6.705522537231445e-8,
+      6.146728992462158e-8,
+      5.960464477539063e-8,
+      6.332993507385254e-8
+    ],
+    "original_alignment_check_passed": true,
+    "threads": 4,
+    "batch_size": 32,
+    "device": "cpu",
+    "fine_tuned": false,
+    "packages": {
+      "numpy": "2.5.3",
+      "torch": "2.14.1+cpu",
+      "sentence-transformers": "6.1.0",
+      "transformers": "5.18.0",
+      "pyarrow": "25.0.1"
+    },
+    "encoding_seconds": 40.7713576999995
+  },
+  "artifact_sha256": {
+    "protocol": "84c38857df526d053218878ed99d210f3ba5ef70e93446b0194f6c2a99a1952d",
+    "histories": "ea59728e79fb48c3dc0acf8aefa260a744e44ba92dab1c57aaf86d1353b8b68a",
+    "cases": "f754c8267e973c33ddddc3828858e38d75bbc34ab0b0ad9373006305bd10dec7",
+    "original_vectors": "de81c908a77d62f4dfae08e5d48a9c07913e3e297abc3d4549a7234c3bc48853"
+  },
+  "implementation_sha256": {
+    "content_ablation.py": "d78c7c98a5f82d73281defc33fa7855ca5f3624c9e65e0bc7ff2e0157da37bf1",
+    "run_content_ablation.py": "951241979d300431486b272e78492d793dcc0a39cf8ae3a8ed485942f2cdbd2b"
+  },
+  "limitations": [
+    "Validation-only exploratory comparisons; no multiple-comparison adjustment or final-test claims.",
+    "Observed-rating AUC is on a restricted selected subset, not the all-candidate recommendation task.",
+    "Unrated suggestions and semantic resemblance are not evidence of enjoyment.",
+    "The experiments do not isolate every text field, prove a sole root cause, or establish that more data solves the gap."
+  ]
+}
+

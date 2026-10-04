@@ -1,0 +1,206 @@
+/* Reversible scale experiment. Remove this import from LandingPage to restore
+   Landing 01 proportions while retaining cleanup, controls, and card hover. */
+.landing-page { max-width: 1680px; padding-inline: 32px; }
+.landing-header { height: 94px; }
+.landing-header .wordmark { font-size: 34px; }
+.landing-header nav { font-size: 14px; gap: 36px; }
+.landing-page .star-border { font-size: 14px; }
+.landing-page .star-content { min-height: 50px; padding: 14px 22px; }
+.landing-hero { grid-template-columns: 1fr 1fr; gap: 40px; min-height: calc(100svh - 94px); padding: 48px 0 56px; }
+.landing-eyebrow { font-size: 12px; letter-spacing: 1.3px; }
+.hero-copy h1 { font-size: clamp(60px,6.3vw,106px); letter-spacing: -.052em; margin: 28px 0 30px; }
+.hero-copy > p { font-size: 17px; line-height: 1.8; }
+.hero-actions { margin: 32px 0 14px; gap: 28px; }
+.watch-button { font-size: 14px; min-height: 50px; }
+.hero-copy > p.hero-note { font-size: 12px; }
+.product-scene { height: 540px; }
+.scene-panel { width: 85%; max-width: 560px; height: 398px; }
+.scene-panel-bar { height: 50px; padding: 0 24px; font-size: 11px; }
+.scene-panel-bar > span:first-child { font-size: 18px; }
+.scene-choices, .scene-profile, .scene-discover { padding: 27px 28px; }
+.scene-kicker { font-size: 10px; margin-bottom: 10px; }
+.scene-panel h3 { font-size: 28px; margin-bottom: 20px; }
+.scene-choice { gap: 14px; padding: 11px 0; }
+.scene-thumb { width: 70px; height: 59px; }
+.scene-choice strong { font-size: 14px; }
+.scene-choice > div > span { font-size: 10px; }
+.scene-vote { width: 36px; height: 36px; }
+.scene-footnote { font-size: 10px; }
+.scene-progress { margin: 16px 0 12px; }
+.scene-progress span { width: 32px; height: 4px; }
+.scene-stats { font-size: 12px; margin-bottom: 18px; }
+.scene-stats strong { font-size: 36px; }
+.scene-patterns { min-height: 94px; margin-bottom: 14px; }
+.scene-patterns > div { grid-template-columns: 85px 1fr 18px; font-size: 13px; padding: 8px 0; }
+.scene-patterns > p { font-size: 14px; }
+.scene-recipe-image { height: 128px; }
+.scene-recipe-grid { gap: 18px; margin-bottom: 18px; }
+.scene-recipe-grid strong { font-size: 13px; margin-top: 10px; }
+.scene-recipe-grid > div > span { font-size: 10px; }
+.scene-seal { padding: 16px 20px; right: 8px; bottom: 12px; }
+.scene-seal span { font-size: 13px; }
+.scene-coordinate { font-size: 11px; top: 10px; }
+.scene-controls { margin-top: 12px; gap: 12px; }
+.scene-mode { font-size: 9px; }
+.scene-controls button { font-size: 12px; min-height: 40px; padding: 10px; }
+.scene-controls button span { font-size: 10px; }
+.preview-description { font-size: 10px; margin-top: 10px; }
+.quick-start { min-height: 94svh; display: flex; flex-direction: column; justify-content: center; padding: 64px 0 72px; }
+.quick-heading { margin-bottom: 36px; }
+.quick-heading h2 { font-size: clamp(36px,4.5vw,68px); letter-spacing: -.045em; margin-top: 14px; }
+.quick-heading > p { font-size: 15px; }
+.quick-grid { gap: 28px; }
+.quick-image { height: auto; aspect-ratio: 1.45; }
+.quick-image > span { font-size: 11px; padding: 8px 10px; }
+.quick-card-body { padding-top: 20px; }
+.quick-meta { font-size: 12px; }
+.quick-card h3 { font-size: clamp(22px,1.9vw,30px); margin: 10px 0 18px; }
+.quick-card .opinion-buttons button { font-size: 13px; min-height: 48px; }
+.quick-bottom { padding: 30px 0; margin-top: 10px; border-bottom: 0; }
+.quick-bottom p { font-size: 13px; }
+.landing-page .text-link { font-size: 15px; min-height: 48px; }
+.taste-story { min-height: 100svh; gap: 72px; padding: 80px 0; border-top: 1px solid var(--line); }
+.slow-reveal { font-size: clamp(38px,4.15vw,66px); line-height: 1.18; letter-spacing: -.043em; margin: 28px 0; }
+.story-copy > p { font-size: 16px; max-width: 450px; margin-bottom: 22px; }
+.graphic-caption { font-size: 10px; padding-top: 20px; }
+.landing-process { grid-template-columns: 1fr 1.15fr; gap: 80px; padding: 90px 0; }
+.process-heading { position: static; align-self: start; }
+.process-heading h2 { font-size: clamp(48px,5.2vw,82px); letter-spacing: -.048em; margin-top: 28px; }
+.process-rows article { min-height: 42svh; align-items: center; gap: 24px; padding: 48px 0; }
+.process-rows article:first-child { padding-top: 0; }
+.process-number { font-size: 10px; min-width: 86px; }
+.process-rows h3 { font-size: 30px; letter-spacing: -1px; }
+.process-rows p { font-size: 16px; margin-top: 16px; }
+.process-rows article > svg { width: 44px; height: 44px; }
+.process-rows article:has(.process-tags) { padding-bottom: 80px; }
+.process-tags { left: 110px; bottom: 45px; font-size: 13px; }
+.landing-cta { min-height: 78svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 32px; margin-inline: -16px; }
+.landing-cta > svg { width: 66px; height: 66px; }
+.landing-cta h2 { font-size: clamp(50px,6.2vw,100px); letter-spacing: -.05em; margin: 30px 0 24px; }
+.landing-cta p { font-size: 17px; margin-bottom: 32px; }
+.landing-cta > a { font-size: 14px; margin-top: 24px; }
+.landing-footer { padding: 34px 0; font-size: 11px; }
+
+@media (max-width: 1100px) and (min-width: 821px) {
+  .landing-page { padding-inline: 28px; }
+  .landing-hero { gap: 28px; }
+  .hero-copy h1 { font-size: 6.1vw; }
+  .hero-copy > p { font-size: 15px; }
+  .product-scene { height: 430px; }
+  .scene-panel { height: 320px; }
+  .scene-panel-bar { height: 42px; padding: 0 16px; }
+  .scene-choices, .scene-profile, .scene-discover { padding: 20px 18px; }
+  .scene-panel h3 { font-size: 21px; margin-bottom: 12px; }
+  .scene-kicker { font-size: 8px; }
+  .scene-thumb { width: 48px; height: 45px; }
+  .scene-choice strong { font-size: 11px; }
+  .scene-choice > div > span, .scene-footnote { font-size: 8px; }
+  .scene-stats { font-size: 10px; margin-bottom: 10px; }
+  .scene-stats strong { font-size: 28px; }
+  .scene-patterns { min-height: 80px; margin-bottom: 8px; }
+  .scene-patterns > div { font-size: 11px; padding: 6px 0; }
+  .scene-recipe-image { height: 100px; }
+  .scene-recipe-grid strong { font-size: 10px; }
+  .scene-controls button { font-size: 10px; }
+  .scene-mode { width: 100%; text-align: center; }
+  .taste-story, .landing-process { gap: 40px; }
+  .process-rows h3 { font-size: 25px; }
+  .process-number { min-width: 62px; font-size: 8px; }
+  .process-tags { left: 86px; }
+}
+
+@media (max-width: 820px) {
+  .landing-page { padding-inline: 24px; }
+  .landing-header { height: 80px; }
+  .landing-header .wordmark { font-size: 29px; }
+  .landing-header nav { font-size: 12px; gap: 20px; }
+  .landing-page .star-border { font-size: 12px; }
+  .landing-page .star-content { min-height: 44px; padding: 12px 16px; }
+  .landing-hero { grid-template-columns: 1fr; min-height: 0; padding: 50px 0; gap: 28px; }
+  .hero-copy h1 { font-size: clamp(42px,9.2vw,75px); }
+  .hero-copy > p { font-size: 16px; }
+  .product-scene { height: 460px; }
+  .scene-panel { height: 360px; }
+  .scene-panel h3 { font-size: 24px; }
+  .scene-choices, .scene-profile, .scene-discover { padding: 22px; }
+  .scene-kicker { font-size: 9px; }
+  .scene-thumb { width: 58px; height: 48px; }
+  .scene-choice strong { font-size: 12px; }
+  .scene-stats { margin-bottom: 12px; }
+  .scene-patterns { min-height: 80px; }
+  .scene-recipe-image { height: 106px; }
+  .quick-start { min-height: 0; padding: 60px 0; }
+  .quick-heading h2 { font-size: 42px; }
+  .quick-grid { gap: 20px; }
+  .quick-card h3 { font-size: 22px; min-height: 52px; }
+  .quick-image { aspect-ratio: 1.15; }
+  .quick-bottom { margin-top: 0; }
+  .taste-story { min-height: 0; padding: 70px 0; gap: 32px; }
+  .slow-reveal { font-size: 38px; }
+  .story-copy > p { font-size: 14px; }
+  .landing-process { grid-template-columns: 1fr; padding: 60px 0; gap: 32px; }
+  .process-heading { position: static; }
+  .process-heading h2 { font-size: 54px; }
+  .process-rows article { min-height: 230px; }
+  .landing-cta { min-height: 65svh; padding: 60px 24px; margin-inline: -12px; }
+}
+
+@media (max-width: 560px) {
+  .landing-page { padding-inline: 20px; }
+  .landing-header .wordmark { font-size: 25px; }
+  .landing-header .star-content { padding-inline: 12px; }
+  .landing-eyebrow { font-size: 9px; letter-spacing: .8px; }
+  .hero-copy h1 { font-size: clamp(35px,10vw,56px); letter-spacing: -2px; }
+  .hero-copy > p { font-size: 15px; }
+  .hero-actions { gap: 20px; }
+  .hero-copy > p.hero-note { font-size: 11px; }
+  .hero-art { padding-top: 0; }
+  .product-scene { height: 335px; }
+  .scene-panel { height: 270px; width: 80%; }
+  .scene-panel-bar { height: 34px; padding: 0 12px; font-size: 8px; }
+  .scene-panel-bar > span:first-child { font-size: 14px; }
+  .scene-choices, .scene-profile, .scene-discover { padding: 14px 12px; }
+  .scene-kicker { font-size: 7px; margin-bottom: 7px; }
+  .scene-panel h3 { font-size: 17px; margin-bottom: 10px; }
+  .scene-choice { padding: 6px 0; gap: 7px; }
+  .scene-thumb { width: 40px; height: 35px; }
+  .scene-choice strong { font-size: 9px; }
+  .scene-choice > div > span, .scene-footnote { font-size: 8px; }
+  .scene-vote { width: 23px; height: 25px; }
+  .scene-progress { margin: 12px 0 9px; }
+  .scene-stats { font-size: 9px; margin-bottom: 6px; }
+  .scene-stats strong { font-size: 27px; }
+  .scene-patterns { min-height: 74px; margin-bottom: 10px; }
+  .scene-patterns > div { grid-template-columns: 60px 1fr 10px; font-size: 10px; padding: 6px 0; }
+  .scene-recipe-image { height: 80px; }
+  .scene-recipe-grid { gap: 12px; margin-bottom: 12px; }
+  .scene-recipe-grid strong { font-size: 10px; margin-top: 7px; }
+  .scene-recipe-grid > div > span { font-size: 8px; }
+  .scene-seal { right: 0; bottom: 6px; padding: 9px; }
+  .scene-seal span { font-size: 10px; }
+  .scene-coordinate { font-size: 7px; right: 0; }
+  .scene-controls { gap: 2px; }
+  .scene-mode { width: 100%; text-align: center; font-size: 8px; }
+  .scene-controls button { font-size: 9px; padding: 7px; }
+  .scene-controls button span { font-size: 8px; }
+  .preview-description { font-size: 9px; }
+  .quick-heading h2 { font-size: 34px; }
+  .quick-grid { gap: 32px; }
+  .quick-image { aspect-ratio: 1.4; }
+  .quick-card h3 { font-size: 24px; min-height: 0; }
+  .quick-bottom { gap: 14px; }
+  .quick-bottom p { font-size: 12px; }
+  .landing-page .text-link { font-size: 14px; }
+  .taste-story { grid-template-columns: 1fr; padding: 60px 0; }
+  .slow-reveal { font-size: 38px; }
+  .process-heading h2 { font-size: 44px; }
+  .process-rows article { gap: 14px; min-height: 260px; }
+  .process-number { min-width: 57px; font-size: 7px; }
+  .process-rows h3 { font-size: 25px; }
+  .process-rows p { font-size: 14px; }
+  .process-rows article > svg { width: 28px; height: 28px; }
+  .process-tags { left: 71px; font-size: 11px; bottom: 35px; }
+  .landing-cta h2 { font-size: 50px; }
+  .landing-cta { margin-inline: -8px; }
+  .landing-footer { gap: 16px; }
+}

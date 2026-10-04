@@ -1,0 +1,27 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "model_card": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "license": "Apache-2.0 (model card)",
+  "fine_tuned_by_tasteprint": false,
+  "device": "cpu",
+  "threads": 4,
+  "batch_size": 32,
+  "max_sequence_length": 256,
+  "recipes_over_token_limit": 0,
+  "maximum_input_tokens": 197,
+  "dimensions": 384,
+  "profile": "normalized mean of unique explicitly liked normalized recipe vectors",
+  "catalog_sha256": "723f7db2cc8dfe33aa9b059b81379e72180d7085c1bc3e7ea1ad0569dc37225e",
+  "vectors_sha256": "de81c908a77d62f4dfae08e5d48a9c07913e3e297abc3d4549a7234c3bc48853",
+  "packages": {
+    "numpy": "2.5.3",
+    "torch": "2.14.1+cpu",
+    "sentence-transformers": "6.1.0",
+    "transformers": "5.18.0",
+    "pyarrow": "25.0.1"
+  },
+  "created_at_utc": "2026-10-01T03:25:49.140973+00:00",
+  "encoding_seconds": 130.2826815999997
+}
+
